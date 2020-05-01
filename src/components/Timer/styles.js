@@ -9,6 +9,12 @@ export const ContainerFluid = styled.div`
   height: 100%;
   padding: 0 20px;
   background: ${(props) => (!props.breaktime ? 'rgb(240, 91, 86)' : '#4e901e')};
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
 `;
 
 export const Container = styled.div`
