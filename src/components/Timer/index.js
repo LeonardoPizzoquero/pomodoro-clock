@@ -69,8 +69,8 @@ export default function Timer() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (parseInt(workTime, 10) === 0 || parseInt(breakTime, 10) === 0) {
-      toast.warning('You cannot set 0 as value!');
+    if (parseInt(workTime, 10) <= 0 || parseInt(breakTime, 10) <= 0) {
+      toast.warning('You cannot set negative numbers or 0 as value!');
     } else {
       toast.success('Timer updated successfully!');
       handleRefresh();
